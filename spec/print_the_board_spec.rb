@@ -1,9 +1,15 @@
-require 'print_the_board'
+require 'tic_tac_toe'
 
-RSpec.describe PrintTheBoard
+RSpec.describe TicTacToe::Board
     context "it should print out an array for the new gameboard" do
         it "should print out a gameboard" do
-            board = PrintTheBoard.new
-            expect(board.game_board).to eq([0,1,2,3,4,5,6,7,8])
+            board = TicTacToe::Board.new
+            expected = "| - | - | - |\n"\
+                       "-------------\n"\
+                       "| - | - | - |\n"\
+                       "-------------\n"\
+                       "| - | - | - |"
+                       
+            expect(board.to_s).to eq(expected)
     end
 end

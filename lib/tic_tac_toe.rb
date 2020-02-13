@@ -1,12 +1,29 @@
-class TicTacToe
-    def board
-        current_board = [[0,1,2], [3,4,5], [6,7,8]] 
-        current_board
+module TicTacToe
+    class Board
+        attr_reader :current_board
+
+        def initialize
+            @current_board = [
+                ['-','-','-'],
+                ['-','-','-'],
+                ['-','-','-']
+            ]
+        end
+
+        def to_s
+            current_board.map { |line|
+                '|' +
+                line.map { |cell|
+                    " #{cell} "
+                }.join('|') +
+                '|'
+            }.join("\n-------------\n")
+        end
     end
 end
 
 #put this in a different file, that will call all the stuff and connect all the things to it
 #instatiate
-game = TicTacToe.new 
+game = TicTacToe::Board.new 
 #call the method
-puts game.board
+puts game.current_board
