@@ -1,9 +1,9 @@
 module TicTacToe
     class Board
-        attr_reader :current_board
+        attr_reader :current
 
         def initialize
-            @current_board = [
+            @current = [
                 ['-','-','-'],
                 ['-','-','-'],
                 ['-','-','-']

@@ -1,8 +1,8 @@
 module TicTacToe
     class DisplayBoard
-#testing
+
         def initialize(board)
-            @current_board = board
+            @current = board
             @wall = '|'
             @tile = '---'
             @cornering = '+'
@@ -10,7 +10,7 @@ module TicTacToe
         end
 
         def to_s
-            @current_board.map { |line|
+            @current.map { |line|
                 @wall + compose_inner_cells(line) + @wall
             }.join(@floor)
         end
@@ -27,3 +27,4 @@ module TicTacToe
         end
     end
 end
+
