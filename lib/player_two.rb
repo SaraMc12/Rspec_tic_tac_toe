@@ -1,9 +1,10 @@
 module TicTacToe
-    class PlayerOne
+    class PlayerTwo
         attr_reader :moves
-        
+
         def initialize
-            @moves ="X"
+            @moves = "O"
+
         end
     end
 end
