@@ -1,10 +1,16 @@
 require 'player_one'
+require 'print_the_board'
 
 RSpec.describe TicTacToe::PlayerOne do
-    context "when testing an X should appear to represent player one has taken a turn" do
-        it "should return an X" do
-            players_choice = TicTacToe::PlayerOne.new
-            expect(players_choice.moves).to eq("X")
+    context "Validate player one has taken a turn with X" do
+            @moves =PlayerOne.new
+        end
+        it "returns a valid choice" do
+            fakey_board = [ [ "-", "-", "-" ], 
+            [ "-", "-", "-" ],
+            [ "-", "-", "-" ] ]
+            board = DisplayBoard.new(fakey_board)
+            expect(@moves.available_cell?(fakey_board, 1, "X")).to be true
         end
     end
 end
