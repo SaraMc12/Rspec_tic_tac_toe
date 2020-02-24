@@ -1,0 +1,25 @@
+class Board
+
+#this should be a blank array of cells each time
+  currentState = [ - - - - - - - -  ]
+
+  def initialize()
+
+#this should allow the user to select a position on the board
+  def selectPosition(index):
+#I believe the || is a way to say "or" and since either human_player or computer_player can selectPosition both
+their character choices should be valid
+    currentState[index] = 'X'||'O'
+
+  def getValidPositions()
+
+  def printCurrentState()
+ 
+
+
+Test for Board Class:
+
+Check if current state of the board has a blank array of cells when created
+Check if the position of human_player gets marked 'X' when they call selectPosition
+Check that the valid positions are correct for the given state of the board
+

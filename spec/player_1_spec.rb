@@ -1,16 +1,15 @@
 require 'player_one'
-require 'print_the_board'
+require 'main'
 
 RSpec.describe TicTacToe::PlayerOne do
     context "Validate player one has taken a turn with X" do
             @moves =PlayerOne.new
         end
         it "returns a valid choice" do
-            fakey_board = [ [ "-", "-", "-" ], 
-            [ "-", "-", "-" ],
-            [ "-", "-", "-" ] ]
-            board = DisplayBoard.new(fakey_board)
-            expect(@moves.available_cell?(fakey_board, 1, "X")).to be true
+            turn % 2 === 0
+                board[move.to_i - 1] = "X"
+                player_1_move += 1
+                puts "X"
         end
     end
 end
