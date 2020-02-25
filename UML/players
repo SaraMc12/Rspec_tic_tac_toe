@@ -1,0 +1,44 @@
+module TicTacToe
+    class Player
+    #I want to be able to have access to the current
+    state of the board for player1
+     attr_reader :board 
+
+        def initialize(board)
+        end
+
+        def human_player
+            @name
+            @number_of_wins
+            @character_selector ="X"
+        end
+
+         def computer_player
+            @number_of_wins
+            @character_selector ="O"
+        end
+
+        #in make_a_move I want to be able to call the board class
+        and give player_1 the ability to check the current state of the
+        board and be able to make sure the move selected is for an empty spot on 
+        the array, then if it is I want otbe able to print an "X on the spot selected in this case (5)
+        
+        def make_a_move()
+         board.get_valid_move
+         board.selected_move(5)
+         end
+
+    end
+end
+
+# Create variables that will call the actions that can be places in main.rb
+
+b1 = board.new
+p1 = Player.new(b1)
+p1.make_a_move()
+
+Tests for Player class
+
+check if all attrributes work
+check to make sure that make_a_move calls the board class and reccognizes where in the array the player has selected
+check to make sure if Player selects a cell that already has been chosen it does not override the first move that was put there
