@@ -48,5 +48,15 @@ RSpec.describe TicTacToe::Players do
 
             expect(new_board_spaces).to eq ["", "", "", "", "", "", "", "", "O"]
         end
+
+        def handle_turn(marker)
+            TicTacToe::Players.new(marker)
+        end
+        context "when player is taking a turn" do
+            it "gets the position the player selected" do
+                position = handle_turn(6)
+                expect(position.marker).to eq(6)
+            end
+        end
     end
 end
